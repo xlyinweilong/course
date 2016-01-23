@@ -1,0 +1,189 @@
+<head th:fragment="headerFile">
+<meta charset="UTF-8" />
+<title></title>
+<!--<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet" />-->
+<link href="/css/bootstrap-theme.min.css" rel="stylesheet" />
+<!--<link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />   -->
+<link href="/css/bootstrap.min.css" rel="stylesheet" />
+<!--<link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet" />-->
+<link href="/css/animate.min.css" rel="stylesheet" />
+<!--<link href="//cdn.bootcss.com/unslider/2.0.3/css/unslider.css" rel="stylesheet" />-->
+<link href="/css/main.css" rel="stylesheet" />
+<!--<script src="//cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>-->
+<script src="/js/jquery.min.js"></script>
+<!--<script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+</head>
+
+<!-- header start -->
+<div th:fragment="header">
+	<div class="container plr0">
+		<div class="col-xs-12 col-md-1 logo">
+			<img src="logo.jpg" style="width: 50px; height: 40px;" />
+		</div>
+		<div class="col-xs-12 col-md-5">
+			<ul class="nav navbar-nav">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">课程</a></li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-md-3 paddingTop10">
+			<div class="headerSearch">
+				<input class="form-control" type="text" placeholder="搜索课程" /> <a href="#"><i class="glyphicon glyphicon-search"></i></a>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-3 pr0">
+			<div class="userInfoHeader">
+				<a href="#" data-toggle="modal" data-target="#login">登录</a> <span>|</span> <a href="#" data-toggle="modal" data-target="#regist">注册</a> <span>|</span> <a href="#">帮助</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:fragment="headerIndex">
+	<div class="col-xs-12 col-md-3 logo">
+		<img src="logo.jpg" style="width: 100px; height: 80px;" />
+	</div>
+	<div class="col-xs-12 col-md-6 paddingTop15">
+		<div class="search">
+			<input class="form-control" type="text" placeholder="搜索课程" /> <a><i class="glyphicon glyphicon-search"></i></a>
+		</div>
+		<div class="hot_search">
+			<a class="first" href="#">出国游口语</a> <a class="notfirst" href="#">二级建造师</a> <a class="notfirst" href="#">百万奖学金回馈</a> <a class="notfirst" href="#">新·设计大咖秀</a>
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-3">
+		<div class="userInfo">
+			<a href="#">登录</a> <span>|</span> <a href="#">注册</a> <span>|</span> <a href="#">帮助</a>
+		</div>
+	</div>
+</div>
+<!-- header end -->
+
+<!-- footer start -->
+<footer th:fragment="footer">
+	<div class="container">
+		<div class="row">
+			<p>Copyright &copy; 2014 Coyier. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+<!-- footer end -->
+
+<!-- Modal start -->
+<div th:fragment="signUp">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="signUpModalLabel">报名确定</h4>
+			</div>
+			<div class="modal-body">您确定要报名吗？</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				<button type="button" class="btn btn-primary">确定</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div th:fragment="login">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="loginModalLabel">登录</h4>
+			</div>
+			<div class="modal-body">
+				<form>
+					<div class="input-group form-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> <input type="text" class="form-control" placeholder="请输入账号" />
+					</div>
+					<div class="input-group form-group">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> <input type="password" class="form-control" placeholder="请输入密码" />
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">登录</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div th:fragment="regist">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title" id="registModalLabel">注册</h4>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-danger" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> <span class="sr-only">错误</span> 请输入账号
+				</div>
+				<form>
+					<div class="input-group form-group has-success">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> <input type="text" class="form-control" placeholder="账号 由数字、字母和下划线组成" />
+					</div>
+					<div class="input-group form-group has-error">
+						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> <input type="password" class="form-control" placeholder="密码 由数字、字母和下划线组成" />
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">注册</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal end -->
+
+<!-- hot course start -->
+<div th:fragment="hotCourse" class="row marginTop30">
+	<div>
+		<h3>热门课程</h3>
+		<hr />
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+</div>
+
+<div th:fragment="hotCourseML20" class="row marginTop30 hotDiv">
+	<div>
+		<h3 style="margin-left: 20px;">热门课程</h3>
+		<hr />
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+	<div class="col-xs-3 col-md-3 text-center video">
+		<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+	</div>
+</div>
+<!-- Modal end -->

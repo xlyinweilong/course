@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh_cn">
+<head th:include="templates :: headerFile" />
+<body class="grayBlack">
+	<div class="headerDiv" th:include="templates :: header" />
+	<div class="courseDiv">
+		<div class="container plr0">
+			<div>
+				<p>
+					<a href="#">全部课程</a> > <a href="">摄影</a>
+				</p>
+			</div>
+			<div class="col-xs-12 col-md-6 plr0">
+				<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLC3icSJvoRZo9I2WLR3pqfVG7uGqU9TALFfjYcSeYAsV0iboZGmkbmAjpNn7HFs3xF2Y/510" />
+			</div>
+			<div class="col-xs-12 col-md-6 pr0">
+				<div class="courseRight">
+					<h3>PS抠图技巧大全</h3>
+					<small>报名人数 2063</small>
+					<div>
+						<h4>班级 1</h4>
+
+						<p>支持随到随学，09月21日过期</p>
+						<span> 免费 </span>
+					</div>
+				</div>
+				<button class="btn btn-warning btn-lg" data-toggle="modal" data-target="#signUp">立即报名</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 pl0">
+				<div class="courseDiv1">
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#">课程概述</a></li>
+						<li role="presentation"><a href="#">课程目录</a></li>
+						<li role="presentation"><a href="#">学员评价</a></li>
+					</ul>
+					<div class="courseIntroduce">课程介绍 简 介 史上最全的PS抠图技巧大全，各类抠图技巧详解，让你轻松掌握抠图技巧 学习目标 通过对Photoshop中各类抠图工具的学习，学会并轻松掌握各种抠图技巧 课程目标：通过专门对ps抠图技巧的学习，从而让我们更加好的掌握各种抠图技巧，掌握最实用及最精髓的部分 课程特色：史上最全的抠图技巧!!!!最专业最详细的抠图讲解！！！！ 适用人群：摄影爱好者，ps初学者与爱好者，专业后期人士 优惠方式：免费</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4 courseDiv2">
+				<h4>报名记录(9403)</h4>
+				鲁晓飞<br /> 小白
+			</div>
+		</div>
+		<div class="row marginTop30 hotDiv" th:include="templates :: hotCourseML20" />
+	</div>
+	<footer th:include="templates :: footer" />
+	<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" th:include="templates :: signUp"/>
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" th:include="templates :: login"/>
+	<div class="modal fade" id="regist" tabindex="-1" role="dialog" aria-labelledby="registModalLabel" th:include="templates :: regist"/>
+</body>
+</html>

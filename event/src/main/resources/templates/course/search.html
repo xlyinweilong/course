@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh_cn">
+<head th:include="templates :: headerFile" />
+<body>
+	<div class="headerDiv" th:include="templates :: header" />
+
+	<div class="container">
+		<div class="row fs15">
+			<div class="marginTop30 ">
+				<span class="searchKey"> 关键词：<b class="searchB">123</b> <a href="#" class="searchClose">×</a></span> <span class="marginLeft10">共找到 <b class="searchB">2</b> 门 <b class="searchB">“123”</b>相关课程
+				</span>
+			</div>
+			<div class="marginTop30">
+				<p>
+					<a href="#">全部课程</a> > <a href="">摄影</a>
+				</p>
+			</div>
+			<div class="marginTop30 searchNav">
+				<ul>
+					<dl>
+						<a class="active" href="#">全部课程</a>
+					</dl>
+					<dl>
+						<a href="#">全部</a>
+					</dl>
+					<dl>
+						<a href="#">IT·互联网</a>
+					</dl>
+				</ul>
+			</div>
+			<div class="marginTop30 searchNav">
+				<ul>
+					<dl class="checked">
+						<a class="active" href="#">综合排序</a>
+					</dl>
+					<dl>
+						<a href="#">最新</a>
+					</dl>
+				</ul>
+			</div>
+			<div class="row marginTop30 hotDiv">
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+				<div class="col-xs-3 col-md-2 text-center video">
+					<img class="carousel-inner img-responsive img-rounded" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> <span><a href="#">PS抠图技巧大全</a></span>
+				</div>
+			</div>
+			<div class="row paging text-center">
+				<a class="" href="">&nbsp;&laquo;&nbsp;</a> <a class="active" href="">&nbsp;1&nbsp;</a> <a href="">&nbsp;2&nbsp;</a> ... <a href="">33</a> <a href="">134</a> <a href="">&nbsp;&GT;&nbsp;</a>
+			</div>
+		</div>
+
+
+		<div class="row marginTop30 hotDiv" th:include="templates :: hotCourse" />
+	</div>
+
+	<footer th:include="templates :: footer" />
+	<div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" th:include="templates :: signUp" />
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" th:include="templates :: login" />
+	<div class="modal fade" id="regist" tabindex="-1" role="dialog" aria-labelledby="registModalLabel" th:include="templates :: regist" />
+</body>
+</html>

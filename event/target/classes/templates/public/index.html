@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh_cn">
+<head th:include="templates :: headerFile" />
+<body>
+
+	<div class="container" th:include="templates :: headerIndex" />
+
+	<div class="container marginTop15">
+		<ul class="nav nav-pills nav-justified">
+			<li><a href="#">IT·互联网</a></li>
+			<li><a href="#">设计·创作</a></li>
+			<li><a href="#">语言·留学</a></li>
+			<li><a href="#">职业·考证</a></li>
+			<li><a href="#">升学·考研</a></li>
+			<li><a href="#">兴趣·生活</a></li>
+		</ul>
+	</div>
+
+	<div id="slides-bj">
+		<div class="container ad">
+			<div class="col-xs-1 col-md-1 text-center">
+				<a href="javascript:previous();"><i class="glyphicon glyphicon-menu-left"></i></a>
+			</div>
+			<div class="col-xs-10 col-md-10">
+				<div id="slides"></div>
+			</div>
+			<div class="col-xs-1 col-md-1 text-center">
+				<a href="javascript:next();"><i class="glyphicon glyphicon-menu-right"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row marginTop20">
+			<div>
+				<h3>猜你喜欢</h3>
+				<hr />
+			</div>
+			<div th:each="likeCourse : ${likeCourseList}" class="col-xs-2 col-md-2 text-center video">
+				<img class="carousel-inner img-responsive img-rounded" th:src="${likeCourse.src}" src="//10.url.cn/qqcourse_logo_ng/ajNVdqHZLLAtDy8EOlFCN2aKKoVqUkzJsvEY5sGPo8TZAyOnTm0ibeqa89HfL7f8h6SlF62lTHyY/220" /><br /> 
+				<span><a th:href="${likeCourse.url}" th:text="${likeCourse.text}">PS抠图技巧大全</a></span>
+			</div>
+		</div>
+		<div class="row marginTop30 hotDiv" th:include="templates :: hotCourse" />
+	</div>
+
+	<footer th:include="templates :: footer" />
+	<script src="/js/index.js"></script>
+</body>
+</html>

@@ -64,31 +64,6 @@ public class UserAccessApiInterceptor extends HandlerInterceptorAdapter {
 						response.getWriter().write(Tools.caseObjectToJson(bj));
 						return false;
 					} else {
-						if (handlerMethod.getBean().getClass().getSimpleName().equals("AccountRest") && (method.getName().equals("userAuth") || method.getName().equals("logout"))) {
-							// 无需验证，直接放行
-							response.setStatus(200);
-							return true;
-						} else {
-							Auth auth = authRepository.findByClassNameAndMethodName(handlerMethod.getBean().getClass().getSimpleName(), method.getName());
-							if (user.getType().equals(UserType.ROOT.name())) {
-								if (!(auth.getType().equals(AuthType.ROOT_MENU.name()) || auth.getType().equals(AuthType.ROOT_ACTION.name()))) {
-									response.getWriter().write(Tools.caseObjectToJson(bj));
-									return false;
-								}
-							} else if (user.getType().equals(UserType.ADMIN.name())) {
-								if (auth.getType().equals(AuthType.ROOT_MENU.name()) || auth.getType().equals(AuthType.ROOT_ACTION.name())) {
-									response.getWriter().write(Tools.caseObjectToJson(bj));
-									return false;
-								}
-							} else {
-								Role role = roleRepository.findOne(user.getRoleId());
-								List<Auth> auths = (List<Auth>) authRepository.findAll(role.getAuthIds());
-								if (!auths.contains(auth)) {
-									response.getWriter().write(Tools.caseObjectToJson(bj));
-									return false;
-								}
-							}
-						}
 						return true;
 					}
 				}

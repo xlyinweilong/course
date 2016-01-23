@@ -1,5 +1,12 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/resources/templates/account/learning.html=UTF-8
+encoding//src/main/resources/templates/account/tasks.html=UTF-8
+encoding//src/main/resources/templates/account/user.html=UTF-8
+encoding//src/main/resources/templates/course/course.html=UTF-8
+encoding//src/main/resources/templates/course/search.html=UTF-8
+encoding//src/main/resources/templates/public/index.html=UTF-8
+encoding//src/main/resources/templates/templates.html=UTF-8
 encoding//src/test/java=UTF-8
 encoding/<project>=UTF-8
